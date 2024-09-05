@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import logo from '../assets/img/omnifood-logo.png';
 
@@ -26,49 +26,49 @@ const Header = () => {
           : ''
       }`}
     >
-      <div className="container mx-auto px-4 h-full flex items-center justify-between">
-        <a href="#">
-          <img src={logo} alt="Omnifood logo" className="h-8" />
+      <div className='container mx-auto px-4 h-full flex items-center justify-between'>
+        <a href='#'>
+          <img src={logo} alt='Omnifood logo' className='h-8' />
         </a>
 
         <nav className={`main-nav ${isNavOpen ? 'block' : 'hidden'} md:block`}>
-          <ul className="flex flex-col md:flex-row items-center gap-12">
+          <ul className='flex flex-col md:flex-row items-center gap-12'>
             <li>
               <a
-                className="text-[1.8rem] font-medium text-[#333] hover:text-[#cf711f] transition-all duration-300"
-                href="#how"
+                className='text-[1.8rem] font-medium text-[#333] hover:text-[#cf711f] transition-all duration-300'
+                href='#how'
               >
                 How it works
               </a>
             </li>
             <li>
               <a
-                className="text-[1.8rem] font-medium text-[#333] hover:text-[#cf711f] transition-all duration-300"
-                href="#meals"
+                className='text-[1.8rem] font-medium text-[#333] hover:text-[#cf711f] transition-all duration-300'
+                href='#meals'
               >
                 Meals
               </a>
             </li>
             <li>
               <a
-                className="text-[1.8rem] font-medium text-[#333] hover:text-[#cf711f] transition-all duration-300"
-                href="#testimonials"
+                className='text-[1.8rem] font-medium text-[#333] hover:text-[#cf711f] transition-all duration-300'
+                href='#testimonials'
               >
                 Testimonials
               </a>
             </li>
             <li>
               <a
-                className="text-[1.8rem] font-medium text-[#333] hover:text-[#cf711f] transition-all duration-300"
-                href="#pricing"
+                className='text-[1.8rem] font-medium text-[#333] hover:text-[#cf711f] transition-all duration-300'
+                href='#pricing'
               >
                 Pricing
               </a>
             </li>
             <li>
               <a
-                className="text-[1.8rem] font-medium bg-[#e67e22] text-white py-3 px-6 rounded-full hover:bg-[#cf711f] transition-all duration-300"
-                href="#cta"
+                className='text-[1.8rem] font-medium bg-[#e67e22] text-white py-3 px-6 rounded-full hover:bg-[#cf711f] transition-all duration-300'
+                href='#cta'
               >
                 Try for free
               </a>
@@ -77,7 +77,7 @@ const Header = () => {
         </nav>
 
         <button
-          className="md:hidden border-none bg-transparent cursor-pointer"
+          className='md:hidden border-none bg-transparent cursor-pointer'
           onClick={() => setIsNavOpen(!isNavOpen)}
         >
           {isNavOpen ? <X size={48} /> : <Menu size={48} />}

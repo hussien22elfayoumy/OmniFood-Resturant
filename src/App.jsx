@@ -1,17 +1,16 @@
-import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import FeaturedIn from './components/FeaturedIn';
 import HowItWorks from './components/HowItWorks';
 import Meals from './components/Meals';
 import Testimonials from './components/Testimonials';
-import CTA from './Components/CTA';
+import CallToAction from './Components/CallToAction';
 import Footer from './Components/Footer';
 import Pricing from './Components/Pricing';
 
 function App() {
   return (
-    <div className="font-rubik text-[#555]">
+    <div className='font-rubik text-[#555]'>
       <Header />
       <main>
         <Hero />
@@ -20,7 +19,7 @@ function App() {
         <Meals />
         <Testimonials />
         <Pricing />
-        <CTA />
+        <CallToAction />
         <Footer />
       </main>
     </div>
