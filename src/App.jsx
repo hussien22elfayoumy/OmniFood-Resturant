@@ -4,10 +4,10 @@ import Hero from './components/Hero';
 import FeaturedIn from './components/FeaturedIn';
 import HowItWorks from './components/HowItWorks';
 import Meals from './components/Meals';
-// import Testimonials from './components/Testimonials';
-// import Pricing from './components/Pricing';
-// import CTA from './components/CTA';
-// import Footer from './components/Footer';
+import Testimonials from './components/Testimonials';
+import CTA from './Components/CTA';
+import Footer from './Components/Footer';
+import Pricing from './Components/Pricing';
 
 function App() {
   return (
@@ -18,11 +18,11 @@ function App() {
         <FeaturedIn />
         <HowItWorks />
         <Meals />
-        {/* <Testimonials />
+        <Testimonials />
         <Pricing />
-        <CTA /> */}
+        <CTA />
+        <Footer />
       </main>
-      {/* <Footer /> */}
     </div>
   );
 }

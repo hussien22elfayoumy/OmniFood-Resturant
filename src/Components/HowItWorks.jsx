@@ -5,20 +5,22 @@ import img3 from '../assets/img/app/app-screen-3.png';
 
 const HowItWorks = () => {
   return (
-    <section className="py-12 md:py-24" id="how">
-      <div className="container mx-auto px-4">
-        <span className="text-xs md:text-sm font-semibold uppercase text-orange-700">
+    <section className="py-24" id="how">
+      <div className="container mx-auto text-center">
+        <span className="text-2xl font-medium text-orange-600  uppercase tracking-wider mb-6 spac inline-block">
           How it works
         </span>
-        <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mt-2 md:mt-4 mb-12 md:mb-24">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-24">
           Your daily dose of health in 3 simple steps
         </h2>
       </div>
-      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-x-16 gap-y-12 md:gap-y-24 items-center">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-5 items-center">
         {/* Step 1 */}
-        <div className="space-y-4 md:space-y-6">
-          <p className="text-4xl md:text-7xl font-semibold text-gray-200">01</p>
-          <h3 className="text-xl md:text-3xl font-bold text-gray-900">
+        <div className="max-w-[50rem]">
+          <p className=" md:text-8xl text-7xl font-semibold text-gray-300 mb-4">
+            01
+          </p>
+          <h3 className="lg:text-5xl md:text-3xl font-bold text-gray-900 mb-6 md:mb-8">
             Tell us what you like (and what not):
           </h3>
           <p className="text-base md:text-lg text-gray-700 leading-relaxed">
@@ -28,29 +30,23 @@ const HowItWorks = () => {
             diet you follow!
           </p>
         </div>
-        <div className="relative flex justify-center items-center">
-          <div className="absolute w-4/5 md:w-5/6 pb-4/5 md:pb-5/6 bg-orange-50 rounded-full -z-10"></div>
-          <div className="absolute w-3/5 md:w-4/5 pb-3/5 md:pb-4/5 bg-orange-200 rounded-full -z-10"></div>
-          <img
-            className="max-w-full md:max-w-xs"
-            src={img1}
-            alt="App Screen 1"
-          />
+        <div className="relative flex items-center justify-center">
+          <img className="max-w-[35%] relative z-10" src={img1} alt="" />
+          <div className="absolute w-[70%] pt-[70%] bg-orange-100 rounded-full z-[-2]"></div>
+          <div className="absolute w-[50%] pt-[50%] bg-orange-300 rounded-full z-[-1]"></div>
         </div>
 
-        {/* Step 2 */}
-        <div className="relative flex justify-center items-center order-last md:order-none">
-          <div className="absolute w-4/5 md:w-5/6 pb-4/5 md:pb-5/6 bg-orange-50 rounded-full -z-10"></div>
-          <div className="absolute w-3/5 md:w-4/5 pb-3/5 md:pb-4/5 bg-orange-200 rounded-full -z-10"></div>
-          <img
-            className="max-w-full md:max-w-xs"
-            src={img2}
-            alt="App Screen 2"
-          />
+        {/*  Step 2  */}
+        <div className="relative flex items-center justify-center">
+          <img className="max-w-[35%] relative z-10" src={img2} alt="" />
+          <div className="absolute w-[70%] pt-[70%] bg-orange-100 rounded-full z-[-2]"></div>
+          <div className="absolute w-[50%] pt-[50%] bg-orange-300 rounded-full z-[-1]"></div>
         </div>
-        <div className="space-y-4 md:space-y-6">
-          <p className="text-4xl md:text-7xl font-semibold text-gray-200">02</p>
-          <h3 className="text-xl md:text-3xl font-bold text-gray-900">
+        <div>
+          <p className="text-7xl md:text-8xl font-semibold text-gray-300 mb-4">
+            02
+          </p>
+          <h3 className="lg:text-5xl md:text-3xl font-bold text-gray-900 mb-6 md:mb-8">
             Approve your weekly meal plan:
           </h3>
           <p className="text-base md:text-lg text-gray-700 leading-relaxed">
@@ -60,10 +56,12 @@ const HowItWorks = () => {
           </p>
         </div>
 
-        {/* Step 3 */}
-        <div className="space-y-4 md:space-y-6">
-          <p className="text-4xl md:text-7xl font-semibold text-gray-200">03</p>
-          <h3 className="text-xl md:text-3xl font-bold text-gray-900">
+        {/* Step 3  */}
+        <div>
+          <p className="text-9xl md:text-8xl font-semibold text-gray-300 mb-4">
+            03
+          </p>
+          <h3 className="lg:text-5xl md:text-3xl font-bold text-gray-900 mb-6 md:mb-8">
             Receive meals at convenient time:
           </h3>
           <p className="text-base md:text-lg text-gray-700 leading-relaxed">
@@ -72,14 +70,10 @@ const HowItWorks = () => {
             change delivery schedule and address daily.
           </p>
         </div>
-        <div className="relative flex justify-center items-center">
-          <div className="absolute w-4/5 md:w-5/6 pb-4/5 md:pb-5/6 bg-orange-50 rounded-full -z-10"></div>
-          <div className="absolute w-3/5 md:w-4/5 pb-3/5 md:pb-4/5 bg-orange-200 rounded-full -z-10"></div>
-          <img
-            className="max-w-full md:max-w-xs"
-            src={img3}
-            alt="App Screen 3"
-          />
+        <div className="relative flex items-center justify-center">
+          <img className="max-w-[35%] relative z-10" src={img3} alt="" />
+          <div className="absolute w-[70%] pt-[70%] bg-orange-100 rounded-full z-[-2]"></div>
+          <div className="absolute w-[50%] pt-[50%] bg-orange-300 rounded-full z-[-1]"></div>
         </div>
       </div>
     </section>
