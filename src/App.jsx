@@ -1,16 +1,16 @@
-import Header from './components/Header';
-import Hero from './components/Hero';
-import FeaturedIn from './components/FeaturedIn';
-import HowItWorks from './components/HowItWorks';
-import Meals from './components/Meals';
-import Testimonials from './components/Testimonials';
+import Header from './Components/Header';
+import Hero from './Components/Hero';
+import FeaturedIn from './Components/FeaturedIn';
+import HowItWorks from './Components/HowItWorks';
+import Meals from './Components/Meals';
 import CallToAction from './Components/CallToAction';
 import Footer from './Components/Footer';
 import Pricing from './Components/Pricing';
+import Testimonials from './Components/Testimonials';
 
 function App() {
   return (
-    <div className='font-rubik text-[#555]'>
+    <div className="font-rubik text-[#555]">
       <Header />
       <main>
         <Hero />
