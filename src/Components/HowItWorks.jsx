@@ -52,7 +52,7 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="py-16 sm:py-20" id="how">
+    <section className="py-16 sm:py-20" id="how-it-works">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 sm:mb-16">
           <span className="text-lg sm:text-xl font-medium text-orange-500 uppercase tracking-wide mb-2 inline-block">

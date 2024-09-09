@@ -14,6 +14,11 @@ const Header = () => {
 
   const toggleNav = () => setIsNavOpen(!isNavOpen);
 
+  const getHref = item => {
+    if (item === 'How it works') return '#how-it-works';
+    return `#${item.toLowerCase().replace(' ', '-')}`;
+  };
+
   return (
     <header
       className={`bg-[#fdf2e9] py-4 px-4 sm:px-6 ${
@@ -43,7 +48,7 @@ const Header = () => {
                   <li key={item}>
                     <a
                       className="text-lg font-medium text-[#333] hover:text-[#cf711f] transition-all duration-300"
-                      href={`#${item.toLowerCase().replace(' ', '-')}`}
+                      href={getHref(item)}
                     >
                       {item}
                     </a>
@@ -70,7 +75,7 @@ const Header = () => {
                   <li key={item}>
                     <a
                       className="text-base font-medium text-[#333] hover:text-[#cf711f] transition-all duration-300"
-                      href={`#${item.toLowerCase().replace(' ', '-')}`}
+                      href={getHref(item)}
                       onClick={() => setIsNavOpen(false)}
                     >
                       {item}
