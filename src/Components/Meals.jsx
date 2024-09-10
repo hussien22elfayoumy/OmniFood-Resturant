@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import img1 from '../assets/img/meals/meal-1.jpg';
 import img2 from '../assets/img/meals/meal-2.jpg';
 
@@ -12,17 +12,21 @@ const Icon = ({ name }) => {
     check: 'M5 13l4 4L19 7',
   };
 
+  Icon.propTypes = {
+    name: PropTypes.string,
+  };
+
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className="h-5 w-5 text-orange-500"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
+      xmlns='http://www.w3.org/2000/svg'
+      className='h-5 w-5 text-orange-500'
+      fill='none'
+      viewBox='0 0 24 24'
+      stroke='currentColor'
     >
       <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        strokeLinecap='round'
+        strokeLinejoin='round'
         strokeWidth={2}
         d={icons[name]}
       />
@@ -31,11 +35,11 @@ const Icon = ({ name }) => {
 };
 
 const MealCard = ({ image, tags, title, calories, nutriScore, rating }) => (
-  <div className="rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-    <img className="w-full h-48 object-cover" src={image} alt={title} />
-    <div className="p-4">
-      <div className="flex flex-wrap gap-2 mb-2">
-        {tags.map(tag => (
+  <div className='rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl'>
+    <img className='w-full h-48 object-cover' src={image} alt={title} />
+    <div className='p-4'>
+      <div className='flex flex-wrap gap-2 mb-2'>
+        {tags.map((tag) => (
           <span
             key={tag.text}
             className={`px-2 py-1 text-xs font-semibold uppercase rounded-full ${tag.color}`}
@@ -44,14 +48,14 @@ const MealCard = ({ image, tags, title, calories, nutriScore, rating }) => (
           </span>
         ))}
       </div>
-      <h3 className="text-xl font-medium text-gray-800 mb-4">{title}</h3>
-      <ul className="space-y-2">
+      <h3 className='text-xl font-medium text-gray-800 mb-4'>{title}</h3>
+      <ul className='space-y-2'>
         {[
           { icon: 'flame', text: `${calories} calories` },
           { icon: 'scale', text: `NutriScore ® ${nutriScore}` },
           { icon: 'star', text: `${rating.score} rating (${rating.count})` },
         ].map((item, index) => (
-          <li key={index} className="flex items-center gap-2 text-sm">
+          <li key={index} className='flex items-center gap-2 text-sm'>
             <Icon name={item.icon} />
             <span>{item.text}</span>
           </li>
@@ -60,6 +64,15 @@ const MealCard = ({ image, tags, title, calories, nutriScore, rating }) => (
     </div>
   </div>
 );
+
+MealCard.propTypes = {
+  image: PropTypes.string,
+  tags: PropTypes.string,
+  title: PropTypes.string,
+  calories: PropTypes.string,
+  nutriScore: PropTypes.string,
+  rating: PropTypes.object,
+};
 
 const DietList = () => {
   const diets = [
@@ -75,12 +88,12 @@ const DietList = () => {
   ];
 
   return (
-    <div className="bg-gray-100 p-4 rounded-xl">
-      <h3 className="text-xl font-semibold mb-4">Works with any diet:</h3>
-      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-        {diets.map(diet => (
-          <li key={diet} className="flex items-center gap-2 text-sm">
-            <Icon name="check" />
+    <div className='bg-gray-100 p-4 rounded-xl'>
+      <h3 className='text-xl font-semibold mb-4'>Works with any diet:</h3>
+      <ul className='grid grid-cols-1 sm:grid-cols-2 gap-2'>
+        {diets.map((diet) => (
+          <li key={diet} className='flex items-center gap-2 text-sm'>
+            <Icon name='check' />
             <span>{diet}</span>
           </li>
         ))}
@@ -113,26 +126,26 @@ const Meals = () => {
   ];
 
   return (
-    <section className="py-16" id="meals">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <span className="text-orange-500 font-semibold mb-2 block">
+    <section className='py-16' id='meals'>
+      <div className='container mx-auto px-4'>
+        <div className='text-center mb-12'>
+          <span className='text-orange-500 font-semibold mb-2 block'>
             Meals
           </span>
-          <h2 className="text-3xl font-bold">
+          <h2 className='text-3xl font-bold'>
             Omnifood AI chooses from 5,000+ recipes
           </h2>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'>
           {meals.map((meal, index) => (
             <MealCard key={index} {...meal} />
           ))}
           <DietList />
         </div>
-        <div className="text-center">
+        <div className='text-center'>
           <a
-            href="#"
-            className="text-base text-orange-500 font-semibold hover:underline"
+            href='#'
+            className='text-base text-orange-500 font-semibold hover:underline'
           >
             See all recipes &rarr;
           </a>
