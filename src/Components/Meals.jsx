@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import img1 from '../assets/img/meals/meal-1.jpg';
 import img2 from '../assets/img/meals/meal-2.jpg';
 
@@ -143,12 +144,12 @@ const Meals = () => {
           <DietList />
         </div>
         <div className='text-center'>
-          <a
-            href='#'
+          <Link
+            to='/recipes'
             className='text-base text-orange-500 font-semibold hover:underline'
           >
             See all recipes &rarr;
-          </a>
+          </Link>
         </div>
       </div>
     </section>

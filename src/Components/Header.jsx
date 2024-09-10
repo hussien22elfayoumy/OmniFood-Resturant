@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import logo from '../assets/img/omnifood-logo.png';
 
 const Header = () => {
@@ -29,9 +30,9 @@ const Header = () => {
     >
       <div className='container mx-auto'>
         <div className='flex items-center justify-between'>
-          <a href='#'>
+          <Link to='/'>
             <img src={logo} alt='Omnifood logo' className='h-6 sm:h-7' />
-          </a>
+          </Link>
 
           <button
             className='lg:hidden border-none bg-transparent cursor-pointer'

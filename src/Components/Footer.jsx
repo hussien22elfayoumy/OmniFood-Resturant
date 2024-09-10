@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo from '../assets/img/omnifood-logo.png';
 import {
   IoLogoInstagram,
@@ -11,9 +12,9 @@ const Footer = () => {
       <div className='container mx-auto px-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6'>
         {/* Logo and Social Links */}
         <div className='col-span-2 md:col-span-3 lg:col-span-1 flex flex-col'>
-          <a href='#' className='mb-4'>
+          <Link to='/' className='mb-4'>
             <img src={logo} alt='Omnifood logo' className='h-8' />
-          </a>
+          </Link>
           <div className='flex gap-4 mb-4'>
             <a href='#' className='text-gray-600 hover:text-gray-800'>
               <IoLogoInstagram size={20} />
