@@ -1,29 +1,25 @@
-import Header from './Components/Header';
-import Hero from './Components/Hero';
-import FeaturedIn from './Components/FeaturedIn';
-import HowItWorks from './Components/HowItWorks';
-import Meals from './Components/Meals';
-import CallToAction from './Components/CallToAction';
-import Footer from './Components/Footer';
-import Pricing from './Components/Pricing';
-import Testimonials from './Components/Testimonials';
+import {
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+} from 'react-router-dom';
+
+import MainLayout from './layouts/MainLayout';
+import HomePage from './pages/HomePage';
+import AllRecipes from './pages/AllRecipes';
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/' element={<MainLayout />}>
+      <Route path='/' element={<HomePage />} />
+      <Route path='/recipes' element={<AllRecipes />} />
+    </Route>
+  )
+);
 
 function App() {
-  return (
-    <div className="font-rubik text-[#555]">
-      <Header />
-      <main>
-        <Hero />
-        <FeaturedIn />
-        <HowItWorks />
-        <Meals />
-        <Testimonials />
-        <Pricing />
-        <CallToAction />
-        <Footer />
-      </main>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

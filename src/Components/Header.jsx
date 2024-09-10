@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import logo from '../assets/img/omnifood-logo.png';
 
@@ -14,7 +14,7 @@ const Header = () => {
 
   const toggleNav = () => setIsNavOpen(!isNavOpen);
 
-  const getHref = item => {
+  const getHref = (item) => {
     if (item === 'How it works') return '#how-it-works';
     return `#${item.toLowerCase().replace(' ', '-')}`;
   };
@@ -27,27 +27,27 @@ const Header = () => {
           : ''
       }`}
     >
-      <div className="container mx-auto">
-        <div className="flex items-center justify-between">
-          <a href="#">
-            <img src={logo} alt="Omnifood logo" className="h-6 sm:h-7" />
+      <div className='container mx-auto'>
+        <div className='flex items-center justify-between'>
+          <a href='#'>
+            <img src={logo} alt='Omnifood logo' className='h-6 sm:h-7' />
           </a>
 
           <button
-            className="lg:hidden border-none bg-transparent cursor-pointer"
+            className='lg:hidden border-none bg-transparent cursor-pointer'
             onClick={toggleNav}
-            aria-label="Toggle navigation"
+            aria-label='Toggle navigation'
           >
             {isNavOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
 
-          <nav className="hidden lg:block">
-            <ul className="flex items-center gap-8">
+          <nav className='hidden lg:block'>
+            <ul className='flex items-center gap-8'>
               {['How it works', 'Meals', 'Testimonials', 'Pricing'].map(
-                item => (
+                (item) => (
                   <li key={item}>
                     <a
-                      className="text-lg font-medium text-[#333] hover:text-[#cf711f] transition-all duration-300"
+                      className='text-lg font-medium text-[#333] hover:text-[#cf711f] transition-all duration-300'
                       href={getHref(item)}
                     >
                       {item}
@@ -57,8 +57,8 @@ const Header = () => {
               )}
               <li>
                 <a
-                  className="text-lg font-medium bg-[#e67e22] text-white py-2 px-4 rounded-full hover:bg-[#cf711f] transition-all duration-300"
-                  href="#cta"
+                  className='text-lg font-medium bg-[#e67e22] text-white py-2 px-4 rounded-full hover:bg-[#cf711f] transition-all duration-300'
+                  href='#cta'
                 >
                   Try for free
                 </a>
@@ -68,13 +68,13 @@ const Header = () => {
         </div>
 
         {isNavOpen && (
-          <nav className="mt-4 lg:hidden">
-            <ul className="flex flex-col items-center gap-4">
+          <nav className='mt-4 lg:hidden'>
+            <ul className='flex flex-col items-center gap-4'>
               {['How it works', 'Meals', 'Testimonials', 'Pricing'].map(
-                item => (
+                (item) => (
                   <li key={item}>
                     <a
-                      className="text-base font-medium text-[#333] hover:text-[#cf711f] transition-all duration-300"
+                      className='text-base font-medium text-[#333] hover:text-[#cf711f] transition-all duration-300'
                       href={getHref(item)}
                       onClick={() => setIsNavOpen(false)}
                     >
@@ -85,8 +85,8 @@ const Header = () => {
               )}
               <li>
                 <a
-                  className="text-base font-medium bg-[#e67e22] text-white py-2 px-4 rounded-full hover:bg-[#cf711f] transition-all duration-300"
-                  href="#cta"
+                  className='text-base font-medium bg-[#e67e22] text-white py-2 px-4 rounded-full hover:bg-[#cf711f] transition-all duration-300'
+                  href='#cta'
                   onClick={() => setIsNavOpen(false)}
                 >
                   Try for free
