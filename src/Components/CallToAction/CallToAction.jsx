@@ -1,4 +1,4 @@
-import bg from '../assets/img/eating.jpg';
+import bg from '../../assets/img/eating.jpg';
 
 const CallToAction = () => {
   return (
