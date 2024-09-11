@@ -14,7 +14,7 @@ export const RecipesProvider = ({ children }) => {
       const response = await axios.get(
         `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchTerm}`
       );
-      setMeals(response.data.meals || []);
+      setMeals(response.data.meals);
     } catch (error) {
       console.error('Error fetching meals by name:', error);
       setMeals([]);
