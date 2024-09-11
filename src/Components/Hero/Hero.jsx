@@ -37,7 +37,7 @@ const Hero = () => {
               Get Started
             </a>
             <a
-              href="#how"
+              href="#how-it-works"
               className="text-lg sm:text-xl font-semibold bg-white text-[#555] py-3 px-6 rounded-full hover:bg-[#fdf2e9] transition-all duration-300 shadow-md"
             >
               Learn More ↓
