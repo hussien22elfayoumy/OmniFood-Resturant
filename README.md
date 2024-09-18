@@ -24,7 +24,7 @@ OmniFood is a smart, year-round food subscription service designed to help you r
 
 1. Clone the repository:
 
-```bash
+```bash bash
    git clone https://github.com/hussien22elfayoumy/OmniFood-Resturant.git
 ```
 
