@@ -6,7 +6,7 @@ OmniFood is a smart, year-round food subscription service designed to help you r
 
 ## Overview:
 
-![Website]('./src/assets/img/website-img.png')
+![Website](./src/assets/img/website-img.png)
 
 - **Live Site**: [OmniFood](https://omnifood-resturant-alx.netlify.app/)
 - **Blog Article**: [Final Project Blog Article](https://your-blog-link.com)
